@@ -2,6 +2,8 @@
 
 A [pass fork](https://github.com/HacKanCuBa/password-store) extension that provides a convenient solution to insert a file or password into the store, overriding native insert command.
 
+If you are using [pass](https://passwordstore.org) from your distro package manager or from the [official repo](https://git.zx2c4.com/password-store), then this extension won't work. Use [pass insertfile](https://github.com/hackan/pass-extension-insertfile) instead.
+
 ## Usage
 
 ```
@@ -38,9 +40,9 @@ Or simply copy *insert.bash* to the pass extension directory (~/.password-store/
 
 In order to use extension with `pass`, you need:
 * `pass 1.7.0` or greater. As of today this version has not been released yet.
-Therefore you need to install it by hand from zx2c4.com:
+Therefore you need to install it by hand from the repo:
 
-		git clone https://git.zx2c4.com/password-store
+		git clone https://github.com/HacKanCuBa/password-store.git
 		cd password-store
 		sudo make install
 
