@@ -1,0 +1,60 @@
+.TH pass-insert 1 "January 2017" "pass-insert"
+
+.SH NAME
+pass insert- A \fBpass\fP(1) extension that provides a convenient solution to
+insert either a password or a file into the store.
+
+.SH SYNOPSIS
+\fBpass insert \fP [ \fI--echo\fP, \fI-e\fP | \fI--multiline\fP, \fI-m\fP ] [ \fI--force\fP, \fI-f\fP ] \fIpass-name\fP \fIfile-path\fP
+
+.SH DESCRIPTION
+\fBpass insert\fP Provides an interactive solution to insert a password or file into the store.
+Insert a new password into the password store called \fIpass-name\fP. This will
+read the new password from standard in. If \fI--echo\fP or \fI-e\fP is \fInot\fP specified,
+disable keyboard echo when the password is entered and confirm the password by asking
+for it twice. If \fI--multiline\fP or \fI-m\fP is specified, lines will be read until
+EOF or Ctrl+D is reached. Otherwise, only a single line from standard in is read. If \fIfile-path\fP
+is specified, the file will be added to the store, ignoring echo and multiline options.
+Prompt before overwriting an existing password or file, unless \fI--force\fP or \fI-f\fP is specified.
+
+.SH OPTIONS
+
+.TP
+\fB\-f\fB, \-\-force\fR
+Force to insert and do not wait for user instruction.
+
+\fB\-e\fB, \-\-echo\fR
+Echo the password back to the console during entry.
+
+\fB\-m\fB, \-\-multiline\fR
+Read the standard in ultil EOF or CTRL+D is reached.
+
+.TP
+\fB\-h\fB, \-\-help\fR
+Show usage message.
+
+.SH SEE ALSO
+.BR pass(1),
+
+
+.SH AUTHORS
+.B pass insert
+was written by
+.MT hackan@gmail.com
+HacKan
+.ME .
+
+
+.SH COPYING
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
