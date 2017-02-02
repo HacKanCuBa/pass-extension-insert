@@ -1,14 +1,14 @@
-.TH pass-insert 1 "January 2017" "pass-insert"
+.TH passh-insert 1 "January 2017" "passh-insert"
 
 .SH NAME
-pass insert- A \fBpass\fP(1) extension that provides a convenient solution to
+passh insert- A \fBpassh\fP(1) extension that provides a convenient solution to
 insert either a password or a file into the store.
 
 .SH SYNOPSIS
-\fBpass insert \fP [ \fI--echo\fP, \fI-e\fP | \fI--multiline\fP, \fI-m\fP ] [ \fI--force\fP, \fI-f\fP ] \fIpass-name\fP \fIfile-path\fP
+\fBpassh insert \fP [ \fI--echo\fP, \fI-e\fP | \fI--multiline\fP, \fI-m\fP ] [ \fI--force\fP, \fI-f\fP ] \fIpass-name\fP \fIfile-path\fP
 
 .SH DESCRIPTION
-\fBpass insert\fP Provides an interactive solution to insert a password or file into the store.
+\fBpassh insert\fP Provides an interactive solution to insert a password or file into the store.
 Insert a new password into the password store called \fIpass-name\fP. This will
 read the new password from standard in. If \fI--echo\fP or \fI-e\fP is \fInot\fP specified,
 disable keyboard echo when the password is entered and confirm the password by asking
@@ -34,11 +34,11 @@ Read the standard in ultil EOF or CTRL+D is reached.
 Show usage message.
 
 .SH SEE ALSO
-.BR pass(1),
+.BR pass(1)
 
 
 .SH AUTHORS
-.B pass insert
+.B passh insert
 was written by
 .MT hackan@gmail.com
 HacKan

@@ -20,7 +20,7 @@
 
 help_insert() {
     cat <<-_EOF
-    $PROGRAM $COMMAND [--echo,-e | --multiline,-m] [--force,-f] pass-name [file-path]
+    $PROGRAM insert [--echo,-e | --multiline,-m] [--force,-f] pass-name [file-path]
         Insert new password. Optionally, echo the password back to the console
         during entry. Or, the entry may be multiline. 
         If file-path is a file, it will be inserted (options for 

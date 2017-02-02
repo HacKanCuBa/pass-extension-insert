@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# pass insert - Password Store Extension (https://www.passwordstore.org/)
+# passh insert - Passh (Password Store fork) Extension (https://www.passwordstore.org/)
 # Copyright (C) 2017 HacKan <hackan@gmail.com>.
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 #
 # pass config
 #
-PASS="/usr/bin/pass"
+PASS="/usr/bin/passh"
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR="../"
 export PASSWORD_STORE_DIR="password-store"

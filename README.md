@@ -1,53 +1,53 @@
-# pass insert
+# passh insert
 
-A [pass fork](https://github.com/HacKanCuBa/password-store) extension that provides a convenient solution to insert a file or password into the store, overriding native insert command.
+A [passh](https://github.com/HacKanCuBa/passh) extension that provides a convenient solution to insert a file or password into the store, overriding native insert command.
 
-If you are using [pass](https://passwordstore.org) from your distro package manager or from the [official repo](https://git.zx2c4.com/password-store), then this extension won't work. Use [pass insertfile](https://github.com/hackan/pass-extension-insertfile) instead.
+If you are using [pass](https://passwordstore.org) - instead of the fork passh - from your distro package manager or from the [official repo](https://git.zx2c4.com/password-store), then this extension won't work. Use [pass insertfile](https://github.com/hackan/pass-extension-insertfile) instead.
 
 ## Usage
 
 ```
 Usage:
-    pass insert [--echo,-e | --multiline,-m] [--force,-f] pass-name [file-path]
+    passh insert [--echo,-e | --multiline,-m] [--force,-f] pass-name [file-path]
         Insert new password. Optionally, echo the password back to the console
         during entry. Or, the entry may be multiline.
         If file-path is a file, it will be inserted (options for 
         echo and multiline are ignored)
         Prompt before overwriting existing password or file unless forced.
 
-More information may be found in the pass-insert(1) man page.
+More information may be found in the passh-insert(1) man page.
 ```
 
-See `man pass-insert` for more information.
+See `man passh-insert` for more information.
 
 ## Example
 
 Insert your ssh private key.
 
-	pass insert Systems/General/SSHKey ~/.ssh/id_rsa
+	passh insert Systems/General/SSHKey ~/.ssh/id_rsa
 
 ## Installation
 
 ### Linux
 
-		git clone https://github.com/hackan/pass-extension-insert.git
-		cd pass-extension-insert
+		git clone https://github.com/hackan/passh-extension-insert.git
+		cd passh-extension-insert
 		sudo make install
 
-Or simply copy *insert.bash* to the pass extension directory (~/.password-store/.extensions by default).
+Or simply copy *insert.bash* to the pass extension directory (~/.password-store/.extensions by default) and set it executable to enable it: `chmod +x insert.bash`.
 
 #### Requirements
 
-In order to use extension with `pass`, you need:
-* `pass 1.7.0` or greater. As of today this version has not been released yet.
+In order to use extension with `passh`, you need:
+* `passh 1.7.0` or greater. As of today this version has not been released yet.
 Therefore you need to install it by hand from the repo:
 
-		git clone https://github.com/HacKanCuBa/password-store.git
-		cd password-store
+		git clone https://github.com/HacKanCuBa/passh.git
+		cd passh
 		sudo make install
 
-* You need to enable the extensions in pass: `PASSWORD_STORE_ENABLE_EXTENSIONS=true pass`.
-You can create an alias in `.bashrc`: `alias pass='PASSWORD_STORE_ENABLE_EXTENSIONS=true pass'`
+* You need to enable the extensions in pass: `PASSWORD_STORE_ENABLE_EXTENSIONS=true passh`.
+You can create an alias in `.bashrc`: `alias passh='PASSWORD_STORE_ENABLE_EXTENSIONS=true passh'`
 
 ## Contribution
 Feedback, contributors, pull requests are all very welcome.
