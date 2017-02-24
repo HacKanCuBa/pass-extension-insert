@@ -28,6 +28,8 @@ Insert your ssh private key.
 
 ## Installation
 
+Check the [releases](https://github.com/HacKanCuBa/passh-extension-insert/releases) to use a tested signed version of this extension. If you want the bleeding edge version, keep reading.
+
 ### Linux
 
 		git clone https://github.com/hackan/passh-extension-insert.git
@@ -39,14 +41,9 @@ Or simply copy *insert.bash* to the pass extension directory (~/.password-store/
 #### Requirements
 
 In order to use extension with `passh`, you need:
-* `passh 1.7.0` or greater. As of today this version has not been released yet.
-Therefore you need to install it by hand from the repo:
 
-		git clone https://github.com/HacKanCuBa/passh.git
-		cd passh
-		sudo make install
-
-* You need to enable the extensions in pass: `PASSWORD_STORE_ENABLE_EXTENSIONS=true passh`.
+* `passh 1.7.0` or greater. Check the [website](https://passh.hackan.net) on how to obtain it.  
+* You need to enable the extensions in passh: `PASSWORD_STORE_ENABLE_EXTENSIONS=true passh`.  
 You can create an alias in `.bashrc`: `alias passh='PASSWORD_STORE_ENABLE_EXTENSIONS=true passh'`
 
 ## Contribution
