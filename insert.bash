@@ -34,7 +34,7 @@ usage_insert() {
 Usage:
 $(help_insert)
 
-More information may be found in the pass-insertfile(1) man page.
+More information may be found in the pass-insert(1) man page.
 _EOF
 }
 
