@@ -20,7 +20,7 @@
 
 help_insert() {
 	cat <<-_EOF
-		    $PROGRAM insert [--echo,-e | --multiline,-m] [--force,-f] pass-name [file-path]
+		    [--echo,-e | --multiline,-m] [--force,-f] pass-name [file-path]
 		        Insert new password. Optionally, echo the password back to the console
 		        during entry. Or, the entry may be multiline. 
 		        If file-path is a file, it will be inserted (options for 
@@ -31,10 +31,11 @@ help_insert() {
 
 usage_insert() {
 	cat <<-_EOF
-	Usage:
-	$(help_insert)
+		Usage:
+		    $PROGRAM insert
+			$(help_insert)
 
-	More information may be found in the pass-insert(1) man page.
+		More information may be found in the pass-insert(1) man page.
 	_EOF
 }
 
@@ -54,6 +55,7 @@ cmd_insert() {
 	local path="${1%/}"
 	local passfile="$PREFIX/$path.gpg"
 	check_sneaky_paths "$path"
+	set_git "$passfile"
 
 	[[ $force -eq 0 && -e $passfile ]] && yesno "An entry already exists for $path. Overwrite it?"
 
